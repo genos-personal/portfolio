@@ -1,0 +1,14 @@
+/*********************************
+ Footer
+**********************************/
+@use "../modules" as m;
+
+.footer {
+  padding: 30px 0;
+  background: m.$black;
+  color: m.$white;
+
+  &__copyright {
+    text-align: center;
+  }
+}
