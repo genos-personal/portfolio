@@ -1,0 +1,63 @@
+/*********************************
+ 404 Page
+**********************************/
+@use "../modules" as m;
+
+.page-404 {
+  @include m.flex($ai: center);
+  min-height: 100vh;
+  padding: 100px 0;
+  user-select: none;
+  @include m.mqMax {
+    padding: 70px 0;
+  }
+
+  &__wrap {
+    @include m.flex($fd: column, $ai: center);
+  }
+
+  &__ttl {
+    margin: 0 0 40px;
+  }
+
+  &__txt {
+    margin: 0 auto;
+    border: 3px solid m.$black;
+    padding: 60px 60px 30px;
+    line-height: m.calculate_lh(16, 32);
+    @include m.mqMax(767px) {
+      padding: 30px 20px;
+    }
+
+    p + p {
+      margin: 1em 0 0;
+    }
+  }
+
+  &__logos {
+    @include m.flex($fw: wrap, $gap: 30px 60px, $ai: center, $jc: center);
+    margin: 60px 0 0;
+  }
+
+  &__company,
+  &__wd {
+    max-height: 70px;
+    pointer-events: none;
+  }
+
+  &__link {
+    display: block;
+    margin: 60px 0 0;
+    border: 2px solid m.$black;
+    padding: 8px 30px;
+    background: m.$black;
+    color: m.$white;
+    text-align: center;
+    @include m.transition(background, color);
+
+    &:hover {
+      background: m.$white;
+      color: m.$black;
+    }
+  }
+}

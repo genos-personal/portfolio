@@ -1,0 +1,16 @@
+/*********************************
+ Layouts
+**********************************/
+@use "../modules" as m;
+
+.layout-sample {
+  &__ttl {
+    margin: 0 0 30px;
+  }
+
+  &__txt {
+    p:nth-child(n+2) {
+      margin: 1.4em 0 0;
+    }
+  }
+}
