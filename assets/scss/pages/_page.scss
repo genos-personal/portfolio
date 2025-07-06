@@ -4,12 +4,14 @@
 @use "../modules" as m;
 
 /* Banner */
-#preloader{
-  background: 000;
-  height: 100hv;
-  width: 100%;
+.loader{
   position: fixed;
-  z-index: 9999999999999999999999;
+  top:0; left:0; right:0; bottom: 0;
+  z-index: 1000000;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .top-bnr{
   display: flex;
