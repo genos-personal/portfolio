@@ -135,4 +135,33 @@
     loop: true
   });
 
+  /* Modal */
+const modals = document.querySelectorAll('.modal');
+const openModalBtns = document.querySelectorAll('.openModalBtn');
+const closeModalBtns = document.querySelectorAll('.closeModalBtn');
+
+
+openModalBtns.forEach(button => {
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        modal.style.display = "block";
+    });
+});
+
+closeModalBtns.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        modal.style.display = "none";
+    });
+});
+
+window.addEventListener('click', (event) => {
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+
 } )( jQuery );
