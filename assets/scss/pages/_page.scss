@@ -4,14 +4,12 @@
 @use "../modules" as m;
 
 /* Banner */
-.loader{
+#preloader{
+  background: 000;
+  height: 100hv;
+  width: 100%;
   position: fixed;
-  top:0; left:0; right:0; bottom: 0;
-  z-index: 1000000;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 9999999999999999999999;
 }
 .top-bnr{
   display: flex;
@@ -152,7 +150,7 @@
   }
 
   &__title{
-    color: aqua;
+    color: white;
   }
 
   &__carousel{
@@ -189,13 +187,42 @@
   width: 150px;
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid #888c8d;
+  border: 5px solid #1e3551;
   }
 
   &__txt{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+  }
+
+  &__button{
+     display: inline-block;
+    background:#1e3551;
+    color: white;
+    width: 170px;
+    font-size: 16px;
+    padding: 5px 1px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid #1e3551;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+     @include m.transition(color,background,transform);
+
+     &:hover {
+      color: white;
+      background: none;
+      //animation: pulsate 1s ease-in-out;
+      transform: scale(1.05);
+    }
+  }
+
+  .body-wrap{
+    display: flex;
+    justify-content: space-around;
   }
 }
 
@@ -341,7 +368,7 @@
     padding: 10px;
     overflow-y: auto;
     height: 100%;
-    max-height: 80vh;
+    max-height: 80vh; /* Make sure it doesn't overflow the modal */
     position: relative;
 }
 
