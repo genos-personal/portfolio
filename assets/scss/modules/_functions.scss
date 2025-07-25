@@ -1,0 +1,22 @@
+@function calculateRem($size) {
+  @return calc(($size / 10px) * 1rem);
+}
+@function calculateEm($size) {
+  @return calc(($size / 16px) * 1em); 
+}
+
+@function calculate_ls($tracking) {
+  @return calc(($tracking / 1000) * 1em);
+}
+
+@function calculate_lh($size, $leading) {
+  @return calc($leading / $size);
+}
+
+@function percentVal($size, $parentSize) {
+  @return calc(($size/$parentSize) * 100%);
+}
+
+@function vwVal($size, $viewportSize) {
+  @return calc(($size/$viewportSize) * 100vw);
+}

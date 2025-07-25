@@ -1,0 +1,111 @@
+/*********************************
+ Base
+**********************************/
+@use "modules" as m;
+
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+
+  &.is-menu-opened {
+    overflow-y: hidden;
+  }
+}
+
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background: #111;
+  color: m.$white;
+  font-size: m.$default-font-size;
+  font-family: m.$font-primary;
+  line-height: m.calculate_lh(16, 24);
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+main {
+  overflow: hidden;
+
+  section {
+    padding: 100px 0;
+    margin-left: m.vwVal(365 , 1400);
+    @include m.mqMax {
+      padding: 70px 0;
+      margin-left: unset;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+  @include m.transition(opacity);
+}
+
+img, canvas, iframe {
+  display: block;
+  max-width: 100%;
+}
+
+/* Display formats */
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none !important;
+
+  &-sp {
+    @include m.mqMax {
+      display: none !important;
+    }
+  }
+
+  &-pc {
+    @include m.mqMin {
+      display: none !important;
+    }
+  }
+}
+
+/* Positioning */
+.relative {
+  position: relative;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
