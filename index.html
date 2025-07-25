@@ -19,7 +19,7 @@
         <link rel="stylesheet" id="aos_style-css" href="https://unpkg.com/aos@next/dist/aos.css" type="text/css" media="all">
         <link rel="stylesheet" id="swiper_style-css" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" type="text/css" media="all">
         <link rel="stylesheet" id="site_style-css" href="./assets/css/style.min.css" type="text/css" media="all">
-
+        
         <!-- jQuery -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js" id="jquery-core-js"></script>
     </head>
@@ -69,7 +69,6 @@
                         <p class="content__txt-3"data-aos="fade-left" data-aos-delay="200">And I'm a <span class="typing"></span></p>
                         <a class="top-bnr__lnk" href="#"data-aos="fade-left" data-aos-delay="300">Hire me</a>
                     </div>
-                    
                 </div>
             </section>
 
@@ -126,23 +125,68 @@
                             <div class="top-projects__card"data-aos="fade-left" data-aos-delay="100">
                                 <div class="top-projects__box">
                                     <img class="top-projects__img" src="assets/images/top/scr_01.jpg" alt="">
-                                    <div class="top-projects__txt">Healthcare</div>
-                                    <p>#Project Details:- </p>
+                                    <p class="top-projects__txt">Healthcare</p>
+                                    <button class="openModalBtn" data-modal="modal1">Project Details</button>
+                                    <div id="modal1" class="modal">
+                                        <div class="modal-content">
+                                            <span class="closeModalBtn">&times;</span>
+                                            <div class="modal-body">
+                                                <p class="project-ttl">HEALTHCARE</p>
+                                                <div class="column image-column">
+                                                    <img src="assets/images/top/proj_01.png" alt="Image 1" />
+                                                </div>
+                                                <div class="column description-column">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat libero eget libero consequat, a ultricies nulla sodales...</p>
+                                                    <!-- Add more content here -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="top-projects__card"data-aos="fade-left" data-aos-delay="200">
                                 <div class="top-projects__box">
                                     <img class="top-projects__img" src="assets/images/top/scr_02.jpg" alt="">
-                                    <div class="top-projects__txt">Food Store</div>
-                                    <p>#Project Details:- </p>
-                                </div>  
+                                    <p class="top-projects__txt">Food Store</p>
+                                    <button class="openModalBtn" data-modal="modal2">Project Details</button>
+                                    <div id="modal2" class="modal">
+                                        <div class="modal-content">
+                                            <span class="closeModalBtn">&times;</span>
+                                            <p class="project-ttl">FOOD STORE</p>
+                                            <div class="modal-body">
+                                                <div class="column image-column">
+                                                    <img src="assets/images/top/proj_02.png" alt="Image 1" />
+                                                </div>
+                                                <div class="column description-column">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat libero eget libero consequat, a ultricies nulla sodales...</p>
+                                                    <!-- Add more content here -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="top-projects__card"data-aos="fade-left" data-aos-delay="300">
                                 <div class="top-projects__box">
                                     <img class="top-projects__img" src="assets/images/top/scr_03.jpg" alt="">
-                                    <div class="top-projects__txt">Nursery School</div>
-                                    <p>#Project Details:- </p>
-                                </div>  
+                                    <p class="top-projects__txt">Nursery School</p>
+                                    <button class="openModalBtn" data-modal="modal3">Project Details</button>
+                                    <div id="modal3" class="modal">
+                                        <div class="modal-content">
+                                            <span class="closeModalBtn">&times;</span>
+                                            <p class="project-ttl">NURDERY SCHOOL</p>
+                                            <div class="modal-body">
+                                                <div class="column image-column">
+                                                    <img src="assets/images/top/proj_03.png" alt="Image 1" />
+                                                </div>
+                                                <div class="column description-column">
+                                                    <p>Description for Modal 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat libero eget libero consequat, a ultricies nulla sodales...</p>
+                                                    <!-- Add more content here -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -177,10 +221,12 @@
                     </form>
                 </div>
             </section>
+
             
         </main> <!-- .main -->
         
         <!-- Scripts -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script type="text/javascript" src="https://unpkg.com/aos@next/dist/aos.js" id="aos_script-js"></script>
         <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js'></script>
