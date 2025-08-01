@@ -4,13 +4,6 @@
 @use "../modules" as m;
 
 /* Banner */
-#preloader{
-  background: 000;
-  height: 100hv;
-  width: 100%;
-  position: fixed;
-  z-index: 9999999999999999999999;
-}
 .top-bnr{
   display: flex;
   //background: url(/assets/images/top/bg.jpeg) no-repeat center;
@@ -64,12 +57,13 @@
     color: white;
     width: 170px;
     font-size: 25px;
-    padding: 12px 36px;
+    padding: 12px 17px;
     margin-top: 20px;
     font-weight: 400;
     border-radius: 6px;
     border: 2px solid #1e3551;
     transition: all 0.3s ease;
+    @include m.transition(background);
 
      @include m.mqMax(757px){
         font-size: m.vwVal(25, 757);
@@ -78,7 +72,7 @@
       }
 
     &:hover {
-      color: #1e3551;
+      color: m.$white;
       background: none;
       animation: pulsate 1s ease-in-out;
     }
@@ -246,6 +240,7 @@
     max-width: 700px;
     width: 100%;
     justify-self: center;
+    color: #fff;
   }
 
   input, textarea{
@@ -255,14 +250,21 @@
     border: 1px solid dimgray;
     padding-block: 12px;
     margin-block: 12px;
+    color: #fff;
   }
   button {
     background: #1e3551;
     color: white;
     border-style: none;
-    border: 1px solid #111;
+    border: 2px solid #1e3551;
     padding-block: 16px;
     border-radius: 10px;
+
+    @include m.transition(background);
+
+    &:hover {
+      background: none;
+    }
   }
 }
 
