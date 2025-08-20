@@ -167,7 +167,7 @@ window.addEventListener('click', (event) => {
 });
 
 
-      const chatButton = document.getElementById("chat-button");
+  const chatButton = document.getElementById("chat-button");
   const chatPopup = document.getElementById("chat-popup");
   const closePopup = document.getElementById("close-popup");
 
