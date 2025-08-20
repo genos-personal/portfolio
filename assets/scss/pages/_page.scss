@@ -36,7 +36,7 @@
       }
     }
      &__txt-3{
-      font-size: 40px;
+      font-size: 39px;
 
        @include m.mqMax(757px){
         font-size: m.vwVal(35, 757);
@@ -68,7 +68,7 @@
      @include m.mqMax(757px){
         font-size: m.vwVal(25, 757);
         width: m.vwVal(170, 757);
-        padding:m.vwVal(12, 757) m.vwVal(34, 757);
+        padding:m.vwVal(12, 757) m.vwVal(15, 757);
       }
 
     &:hover {

@@ -363,7 +363,7 @@ img, canvas, iframe {
   }
 }
 .top-bnr .content__txt-3 {
-  font-size: 40px;
+  font-size: 39px;
 }
 @media only screen and (max-width: 757px) {
   .top-bnr .content__txt-3 {
@@ -396,7 +396,7 @@ img, canvas, iframe {
   .top-bnr__lnk {
     font-size: 3.3025099075vw;
     width: 22.4570673712vw;
-    padding: 1.5852047556vw 4.4914134742vw;
+    padding: 1.5852047556vw 1.9815059445vw;
   }
 }
 .top-bnr__lnk:hover {
