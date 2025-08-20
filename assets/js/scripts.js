@@ -165,4 +165,29 @@ window.addEventListener('click', (event) => {
         }
     });
 });
+
+
+      const chatButton = document.getElementById("chat-button");
+  const chatPopup = document.getElementById("chat-popup");
+  const closePopup = document.getElementById("close-popup");
+
+  // Show popup and hide button
+  chatButton.addEventListener("click", () => {
+    chatPopup.style.display = "block";
+    chatButton.style.display = "none";
+  });
+
+  // Hide popup and show button
+  closePopup.addEventListener("click", () => {
+    chatPopup.style.display = "none";
+    chatButton.style.display = "block";
+  });
+
+  // Close popup if click outside, show button again
+  window.addEventListener("click", function (e) {
+    if (!chatPopup.contains(e.target) && e.target !== chatButton) {
+      chatPopup.style.display = "none";
+      chatButton.style.display = "block";
+    }
+  });
 } )( jQuery );
